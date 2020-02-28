@@ -67,7 +67,7 @@ class Student
       FROM students
       WHERE name = ?
       LIMIT 1
-      binding.pry
+      -- binding.pry
     SQL
     DB[:conn].execute(sql, name).map do |row|
       self.new_from_db(row)
