@@ -1,5 +1,5 @@
 require_relative "../config/environment.rb"
-
+require "pry"
 class Student
     attr_accessor :name, :grade, :id
 
@@ -28,6 +28,7 @@ class Student
   end
 
   def save
+    binding.pry
     if self.id
       self.update
     else
