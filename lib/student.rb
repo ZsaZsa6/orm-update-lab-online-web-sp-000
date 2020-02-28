@@ -57,7 +57,7 @@ class Student
     student.id = row[0]
     student.name =  row[1]
     student.grade = row[2]
-    binding.pry
+    # binding.pry
     student
   end
 
@@ -68,7 +68,7 @@ class Student
       WHERE name = ?
       LIMIT 1
     SQL
-
+    binding.pry
     DB[:conn].execute(sql, name).map do |row|
       self.new_from_db(row)
     end.first
