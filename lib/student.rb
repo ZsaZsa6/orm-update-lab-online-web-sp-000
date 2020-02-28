@@ -28,7 +28,7 @@ class Student
   end
 
   def save
-    binding.pry
+    # binding.pry
     if self.id
       self.update
     else
@@ -57,6 +57,7 @@ class Student
     student.id = row[0]
     student.name =  row[1]
     student.grade = row[2]
+    binding.pry
     student
   end
 
